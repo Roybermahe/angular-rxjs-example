@@ -1,0 +1,12 @@
+<div class="container mt-5 w-100">
+  <label class="fw-bold"> Search information</label>
+  <input type="text" class="form-control" [(ngModel)]="search" (ngModelChange)="onSearchUpdate($event)" name="search" placeholder="Escriba aqui...">
+</div>
+<div class="container">
+  <ul class="list-group">
+    <ng-container *ngFor="let item of list">
+      <li class="list-group-item">{{item.id}} | {{item.name}} | {{item.email}} | <span class="badge bg-primary">{{item.status}}</span></li>
+    </ng-container>
+  </ul>
+</div>
+
